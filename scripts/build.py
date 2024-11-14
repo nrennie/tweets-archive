@@ -19,7 +19,7 @@ def short_date(created_at):
 
 
 def url(item):
-    return "https://twitter.com/b0rk/status/" + item["id_str"]
+    return "https://twitter.com/nrennie35/status/" + item["id_str"]
 
 
 def get_page(item):
@@ -30,7 +30,7 @@ def get_page(item):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>julia's twitter archive</title>
+  <title>Nicola's Twitter Archive</title>
   <link rel="stylesheet" href="../../../nitter.css">
   <link rel="stylesheet" href="../../../twitter.css">
   <link rel="stylesheet" href="../../../fonts/css/fontello.css">
@@ -38,7 +38,7 @@ def get_page(item):
 </head>
 <body>
   <div class="wrapper" id="app">
-    <h1><a href="../../..">julia's twitter archive</a></h1>
+    <h1><a href="../../..">Nicola's Twitter Archive</a></h1>
     <a id="source" href="https://github.com/jvns/tweets-archive"> <img alt="source code" src="../../../github-mark.png">  </a>
 
     <div class="timeline">
@@ -49,8 +49,8 @@ def get_page(item):
               <a class="tweet-avatar" href="/"><img class="avatar round" src="../../../profile.jpg" alt=""></a>
               <div class="tweet-name-row">
                 <div class="fullname-and-username">
-                  <a class="fullname" href="/" title="🔎Julia Evans🔍">🔎Julia Evans🔍</a>
-                  <a class="username" href="/" title="@b0rk">@b0rk</a>
+                  <a class="fullname" href="/" title="Nicola Rennie">Nicola Rennie</a>
+                  <a class="username" href="/" title="@nrennie35">@nrennie35</a>
                 </div>
                 <span class="tweet-date"><a href="{url(item)}" title="{date}">{date}</a></span>
               </div>
@@ -74,8 +74,8 @@ def get_page(item):
 def main():
     data = read_data()
     for item in data:
-        os.makedirs(f"b0rk/status/{item['id_str']}", exist_ok=True)
-        with open(f"./b0rk/status/{item['id_str']}/index.html", "w") as f:
+        os.makedirs(f"nrennie35/status/{item['id_str']}", exist_ok=True)
+        with open(f"./nrennie35/status/{item['id_str']}/index.html", "w") as f:
             f.write(get_page(item))
 
 

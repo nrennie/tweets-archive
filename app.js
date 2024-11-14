@@ -54,10 +54,10 @@ const app = Vue.createApp({
             event.preventDefault();
         },
         local_url(item) {
-            return "./b0rk/status/" + item.id_str;
+            return "./nrennie35/status/" + item.id_str;
         },
         twitter_url(item) {
-            return "https://twitter.com/b0rk/status/" + item.id_str;
+            return "https://twitter.com/nrennie35/status/" + item.id_str;
         },
     }
 })
